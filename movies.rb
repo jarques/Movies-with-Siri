@@ -1,3 +1,11 @@
+#
+#   Movies with Siri
+#   by @jarques
+#
+#   An easy way to check Rotten Tomatoes score via Siri, by asking "what is the rating of twister"
+#   v0.3
+#
+
 require 'tweakSiri'
 require 'siriObjectGenerator'
 require 'json' 
