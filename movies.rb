@@ -5,33 +5,35 @@ require 'open-uri'
 
 class Movies < SiriPlugin
 
-	def initialize()
-		@api_key = "ROTTEN TOMATOES API KEY"		
-	end
+  def initialize()
+    @api_key = "ROTTEN TOMATOES API KEY"    
+  end
 
-	def object_from_guzzoni(object, connection) 		
-	object
-	end
+  def object_from_guzzoni(object, connection)     
+    object
+  end
 
-	def object_from_client(object, connection)	
-	object
-	end
+  def object_from_client(object, connection)  
+    object
+  end
 
-	def speech_recognized(object, connection, phrase)
-		if(phrase.match(/what is the rating of (.+)/i))
-			self.plugin_manager.block_rest_of_session_from_server
+  def speech_recognized(object, connection, phrase)
+    if(phrase.match(/what is the rating of (.+)/i))
+      self.plugin_manager.block_rest_of_session_from_server
 
-			term = $1.strip
+      term = $1.strip
 
-			url = "http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=#{term}&page_limit=1&page=1&apikey=#{@api_key}"
-			results = JSON.parse(open(url).read)
+      url = "http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=#{term}&page_limit=1&page=1&apikey=#{@api_key}"
+      results = JSON.parse(open(url).read)
 
-			audience_score = results["movies"][0]["ratings"]["audience_score"]
+      # Need to check if any results have been returned.
 
-			return generate_siri_utterance(connection.lastRefId, "Overall audience score is #{audience_score}")
-		end
+      audience_score = results["movies"][0]["ratings"]["audience_score"]
 
-		object
-	end
+      return generate_siri_utterance(connection.lastRefId, "Overall audience score is #{audience_score}")
+    end
+
+    object
+  end
 
 end
