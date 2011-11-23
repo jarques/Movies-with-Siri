@@ -16,3 +16,8 @@ PLUGINS = [Movies]
 </pre>
 
 Next, run Siri and ask "what is the rating of avatar"
+
+Upcoming
+--------
+
+Right now Movies with Siri only works with "what is the rating of *movie*." Future phrases may be supported, like "how well did *movie* do" or "should I watch *movie*"
