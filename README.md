@@ -21,3 +21,8 @@ Upcoming
 --------
 
 Right now Movies with Siri only works with "what is the rating of *movie*." Future phrases may be supported, like "how well did *movie* do" or "should I watch *movie*"
+
+Disclaimer
+----------
+
+I do not work nor am I affiliated with Apple. I don't condone any illegal activities when it comes to Siri or any Apple trademarks. Use SiriProxy and this plugin at your own discretion and I won't take responsibility for any broken iPhones, Computers or banned UDIDs.
