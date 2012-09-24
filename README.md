@@ -1,6 +1,8 @@
 Movies with Siri
 ================
 
+Note: Movies with Siri is no longer maintained. Siri now includes movie information, you're welcome for the idea Apple.
+
 About
 -----
 This is a simple plugin for SiriProxy (https://github.com/plamoni/SiriProxy) that lets you check the Rotten Tomatoes score for your favorite movies.
