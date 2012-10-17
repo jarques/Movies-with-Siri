@@ -1,7 +1,7 @@
 Movies with Siri
 ================
 
-Note: Movies with Siri is no longer maintained. Siri now includes movie information, you're welcome for the idea Apple.
+Note: Movies with Siri is no longer maintained. Siri now includes movie information, you're welcome for the idea Apple!
 
 About
 -----
